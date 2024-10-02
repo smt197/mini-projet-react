@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header';
+import LeftNavigation from './components/LeftNavigation';
+import MainContent from './components/MainContent';
+import RightChat from './components/RightChat';
+import Footer from './components/Footer';
+import SearchOverlay from './components/SearchOverlay';
 
-function App() {
+import './css/themify-icons.css';
+import './css/feather.css';
+import './css/style.css';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="color-theme-blue mont-font">
+      <div className="preloader"></div>
+      <div className="main-wrapper">
+        <Header />
+        <LeftNavigation />
+        <MainContent />
+        <RightChat />
+        <Footer />
+        <SearchOverlay />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
